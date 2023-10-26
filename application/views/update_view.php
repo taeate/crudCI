@@ -7,7 +7,7 @@
 </head>
 <body>
         <form action="" method="POST">
-
+        <input type="hidden" name="id" value="<?php echo $record['id']; ?>">
         제목: <input type="text" name="title" value="<?php echo $record['title']; ?>">
         내용: <input type="text" name="content" value="<?php echo $record['content']; ?>">
         <input type="submit" name="submit">

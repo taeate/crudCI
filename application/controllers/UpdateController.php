@@ -4,11 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class UpdateController extends CI_Controller {
 
     public function __construct() {
-
         parent::__construct();
-
-        $this->load->database(); // 데이터베이스 라이브러리 로드
-
+    
+        $this->load->database();
+        $this->load->helper('url'); // URL 헬퍼를 로드합니다
         $this->load->model('UpdateModel');
     }
 
@@ -16,6 +15,8 @@ class UpdateController extends CI_Controller {
 
         $data['record'] = $this->UpdateModel->getUpdatedData($id);
 
+        $title = ""; // Initialize title before the if block
+        $content = ""; // Initialize content before the if block
 
         if ($this->input->post()) {
 
@@ -32,14 +33,12 @@ class UpdateController extends CI_Controller {
             echo "수정이 완료되었습니다.";
 
             // 수정이 완료되면 목록 페이지로 리디렉션
-            redirect('list');
+            // redirect('list');
 
+        } else {
+            // POST 데이터가 없을 때, 뷰를 로드합니다.
             $this->load->view('update_view', $data);
-            }
-
-            var_dump($id);
-            var_dump($title);
-            var_dump($content);
+        }
 
     }
 
