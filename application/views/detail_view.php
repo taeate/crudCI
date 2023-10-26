@@ -23,5 +23,12 @@
     <?php endif; ?>
 
     <a href="../list">목록</a>
+
+    <!-- <a href='../update/$id'>수정하기</a>
+
+    <a href='../delete/$id'>삭제하기</a> -->
+
+    <a href="<?= ('../update/' . $id); ?>">수정하기</a>
+    <a href="<?= ('../delete/' . $id); ?>">삭제하기</a>
 </body>
 </html>
