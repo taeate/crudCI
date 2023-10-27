@@ -58,5 +58,6 @@ $route['list'] = 'ListController';
 $route['create'] = 'CreateController';
 $route['detail/(:num)'] = 'DetailController/index/$1';
 $route['update/(:num)'] = 'UpdateController/index/$1';
+$route['delete/(:num)'] = 'DeleteController/index/$1';
 
 

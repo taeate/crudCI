@@ -23,6 +23,8 @@
         echo 'Title: ' . $title . '<br>';
         echo 'Content: ' . $content . '<br>';
         ?>
+
+    <a href="list">목록</a>
         
 </body>
 </html>

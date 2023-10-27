@@ -15,9 +15,6 @@ class UpdateController extends CI_Controller {
 
         $data['record'] = $this->UpdateModel->getUpdatedData($id);
 
-        $title = ""; // Initialize title before the if block
-        $content = ""; // Initialize content before the if block
-
         if ($this->input->post()) {
 
             $id = $this->input->post('id'); 
@@ -30,11 +27,16 @@ class UpdateController extends CI_Controller {
             $this->UpdateModel->update_data($id, $title, $content);
 
             // 수정 성공 메시지를 화면에 출력
-            echo "수정이 완료되었습니다.";
+
 
             // 수정이 완료되면 목록 페이지로 리디렉션
-            // redirect('list');
-
+        
+            echo "<script>
+                    alert('수정이 성공적으로 완료되었습니다.');
+                    window.location = '../list';
+                </script>";
+            
+            
         } else {
             // POST 데이터가 없을 때, 뷰를 로드합니다.
             $this->load->view('update_view', $data);

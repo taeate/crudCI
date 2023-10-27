@@ -7,5 +7,7 @@
 </head>
 <body>
 	CI TEST
+
+	<a href="list">리스트</a>
 </body>
 </html>

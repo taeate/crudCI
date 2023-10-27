@@ -13,9 +13,7 @@ class UpdateModel extends CI_Model {
     public function update_data($id, $title, $content){
 
         $data = array (
-
             'title'=> $title,
-
             'content'=> $content
         );
 
